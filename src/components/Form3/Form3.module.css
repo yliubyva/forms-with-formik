@@ -1,0 +1,181 @@
+.container {
+  margin: 50px auto 0;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 1);
+  padding: 10px 30px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.3);
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to left bottom,
+    rgba(161, 59, 245, 1),
+    rgba(87, 160, 230, 1)
+  );
+}
+
+.head {
+  position: relative;
+  top: -10px;
+  left: -30px;
+  width: calc(100% + 60px);
+  height: 50px;
+  background: rgba(26, 26, 26, 1);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.title {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+}
+
+.groupInputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.phoneInputs {
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  gap: 40px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  color: rgba(161, 161, 161, 1);
+  font-size: 14px;
+  order: 1;
+}
+
+.input,
+.inputArea {
+  border: none;
+  background: rgba(229, 229, 229, 1);
+  border-radius: 5px;
+
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+}
+
+.input:focus-visible {
+  outline: none;
+}
+
+.inputArea {
+  width: 100px;
+}
+
+.buttons,
+.radioContainer {
+  display: flex;
+}
+
+.buttons {
+  gap: 40px;
+}
+
+.radioContainer {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.radioLabel,
+.checkmark::after {
+  display: block;
+}
+
+.radioLabel {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio,
+.checkmark,
+.checkmark::after {
+  position: absolute;
+}
+
+.radio {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: rgba(229, 229, 229, 1);
+  border-radius: 50%;
+}
+
+.radioLabel:hover .radio ~ .checkmark {
+  background-color: rgb(235, 235, 235);
+  transition: background-color 0.2s ease;
+}
+
+.checkmark::after {
+  content: "";
+  opacity: 0;
+  transform: scale(0, 0);
+  transition: all 0.2s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}
+
+.radio:checked ~ .checkmark::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.radioLabel .checkmark::after {
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(113, 182, 86, 1);
+}
+
+.button {
+  width: 170px;
+  height: 50px;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(236, 90, 95, 1);
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+}

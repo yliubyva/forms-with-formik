@@ -1,5 +1,9 @@
+import { Tabs } from "../components/Tabs";
+
 export const App = () => {
     return (
-        <div>App</div>
+        <div>
+            <Tabs />
+        </div>
     )
 }

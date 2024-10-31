@@ -1,0 +1,160 @@
+.container {
+  margin: 50px auto 0;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 1);
+  padding: 50px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.3);
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to left bottom,
+    rgba(119, 66, 118, 1),
+    rgba(199, 67, 119, 1)
+  );
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input {
+  width: 100%;
+}
+
+.input,
+.select {
+  height: 50px;
+  background: rgba(250, 250, 250, 1);
+  border: none;
+  box-shadow: inset 0px 0px 5px 0px rgba(237, 237, 237, 1);
+  padding: 5px 10px;
+}
+
+.input,
+.select,
+.button {
+  border-radius: 5px;
+}
+
+.input:focus-visible,
+.select:focus-visible {
+  outline: none;
+}
+
+.label,
+.title {
+  color: rgba(82, 82, 82, 1);
+}
+
+.radioContainer {
+  margin-top: 15px;
+  display: flex;
+  gap: 25px;
+}
+
+.radioLabel {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: rgba(229, 229, 229, 1);
+  border-radius: 50%;
+}
+
+.radioLabel:hover .radio ~ .checkmark {
+  background-color: rgb(235, 235, 235);
+  transition: background-color 0.2s ease;
+}
+
+.radioLabel,
+.checkmark::after {
+  display: block;
+}
+
+.radio,
+.checkmark,
+.checkmark::after {
+  position: absolute;
+}
+
+.checkmark::after {
+  content: "";
+  opacity: 0;
+  transform: scale(0, 0);
+  transition: all 0.2s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}
+
+.radio:checked ~ .checkmark::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.radioLabel .checkmark::after {
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(113, 182, 86, 1);
+}
+
+.selectContainer,
+.button {
+  grid-column: span 2;
+}
+
+.button {
+  width: 150px;
+  height: 40px;
+  background: rgba(77, 113, 208, 1);
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  font-size: 18px;
+}
+
+.button:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.button:active {
+  border: 3px solid rgb(68, 99, 187);
+  transition: border 0.2s ease;
+}
+
+
