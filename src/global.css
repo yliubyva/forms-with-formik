@@ -34,3 +34,12 @@ img {
 li {
   list-style: none;
 }
+
+body {
+  font-family: sans-serif;
+}
+
+.error {
+  font-size: 14px;
+  color: rgba(250, 140, 127, 1);
+}
